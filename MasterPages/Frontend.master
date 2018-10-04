@@ -13,13 +13,17 @@
 <body>
     <form id="form1" runat="server">
     <div id="PageWrapper">
-        <header><a href="/">Header Goes Here</a></header>
+        <header><a href="/"></a></header>
         <nav>Menu Goes Here</nav>
         <section id="MainContent">
         <asp:ContentPlaceHolder id="cpMainContent" runat="server">
         </asp:ContentPlaceHolder>
         </section>
-        <aside id="Sidebar">Sidebar Goes Here</aside>
+        <aside id="Sidebar">
+            <asp:DropDownList ID="ThemeList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ThemeList_SelectedIndexChanged">
+                <asp:ListItem>Monochrome</asp:ListItem>
+                <asp:ListItem>DarkGrey</asp:ListItem>
+            </asp:DropDownList>Select a Theme <br /></aside>
         <footer>Footer Goes Here</footer>
     </div>
     </form>
